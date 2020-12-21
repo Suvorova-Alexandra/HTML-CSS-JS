@@ -1,0 +1,58 @@
+body,html{
+    margin:0;
+height: 100%;
+width: 100%;
+background-color: #D8BFD8;
+
+}
+
+img{
+    height:100%;
+    width:100%;
+    position: relative;
+    
+}
+.list{
+    position: relative;
+    font-weight: bold;
+    font-size: x-large;
+    margin-left: 5%;
+    margin-top:10%;
+    color: darkblue;
+}
+.pictures{
+    height: 40%;
+    width: 30%;
+    vertical-align: middle;
+    margin-left: 15%;
+    margin-top: 5%;
+}
+.block {
+    color: #fff;
+}
+.color1 {
+    color: #000;
+}
+.focus {
+    border: 1px solid #39c; /* Рамка при получении фокуса */
+    width: 80%; /* Ширина поля */
+   }
+   label:hover{
+    font-size: xx-large;
+    width: 80%; /* Ширина поля */
+    color:white;
+   }
+h1{
+    position: relative;
+    font-weight: bold;
+    font-size: x-large;
+   margin-top: 1%;
+   margin-left: 1%;
+   
+    color: darkblue;
+}
+h1:hover{
+    font-size: xx-large;
+    width: 80%; /* Ширина поля */
+    color:white;
+}

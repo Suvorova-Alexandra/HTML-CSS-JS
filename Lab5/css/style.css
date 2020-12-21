@@ -1,0 +1,124 @@
+body,html{
+    height: 100%;
+    width: 100%;
+    margin: 0; 
+    padding: 0;
+    position:relative;
+
+}
+div.app{
+
+    position: relative;
+    margin-top: -35%;
+    text-align: center;
+}
+div.app1{
+    margin-top: -48%;
+    position: relative;
+}
+.text{
+    color:black;
+    font-size: x-large;
+}
+div.form{
+    align-self: center;
+}
+div.caption-table{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 300px;
+    color: white;
+   opacity: 0.6;
+    background: linear-gradient(#121212, #333333);
+    font-weight: bold;
+    position: relative;
+
+    border: solid 0.5px white;
+
+}
+
+div.table{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 300px;
+    color: black;
+    position: relative;    
+}
+div.table-block1{
+    opacity: 0;
+}
+div.table > div{
+    padding: 10px;
+    line-height: 53px;
+    border: solid 0.5px white;
+}
+div.caption-table > div{
+    padding: 5px;
+}
+div.table-block{
+    height: 400px;
+    color:black;
+    font-weight: bold;
+    overflow-y: auto;
+    overflow-x: none;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    opacity: 0.6;
+    position: relative;
+}
+.select{
+    background-color: black;
+    opacity: 0.6;
+    font-size: larger;
+   color: white;
+}
+
+.button{
+    background-color: black;
+    opacity: 0.6;
+   font-size: larger;
+   color: white;
+}
+
+div.clear-btn-block > button,
+div.table > div > button,
+div.app-block > div > input{
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px;
+    width: 100%;
+    color: #ccc;
+    border: 0;
+    outline: none;
+    background-color: #121212;
+    border-bottom: 1px solid #ccc;
+    transition: all .5s;
+}
+
+div.add-block > div > input[type="text"]:focus{
+    border-bottom: 1px solid #3a3aff;
+    transition: all .5s;
+}
+
+div.clear-btn-block > button:hover,
+div.table > div > button:hover,
+div.app-block > div > input[type="button"]:hover{
+    background-color: #000;
+    border-bottom: 1px solid #3a3aff;
+    transition: all .5s;
+}
+
+div.clear-btn-block > button:active,
+div.table > div > button:active,
+div.app-block > div > input[type="button"]:active{
+    background-color: #000;
+    border-bottom: 1px solid #0000ff;
+    transition: all .5s;
+}
+
+div.table-block{
+    height: 400px;
+    overflow-y: auto;
+    overflow-x: none;
+}

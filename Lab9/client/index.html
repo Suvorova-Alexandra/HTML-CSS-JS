@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js' type='text/javascript'></script>
+</head>
+
+<body>
+  <div class="class1">
+    <div>
+      <legend class="text"><b>Признак продукта:</b></legend>
+      <select name="select" id="select">
+        <option value="Продовольственная">Продовольственная</option>
+        <option value="Непродовольственная">Непродовольственная</option>
+      </select>
+    </div>
+
+    <div>
+      <legend class="text"> <b>Введите наименование продукта:</b></legend>
+      <input type="text" size="40" id="name" pattern="^[а-яА-ЯеЁa-zA-Z-\s]+$">
+    </div>
+    <div>
+      <legend class="text"> <b>Введите количество продукта:</b></legend>
+      <input type="number" id="number">
+    </div>
+
+
+    <button id="add" class="add">Добавить запись</button>
+  </div>
+
+
+
+
+
+  <h2>Продукты</h2>
+
+  <div class="select">
+    <legend class="text"><b>Наименования продуктов: </b></legend>
+    <select name="products" id="products">
+    </select>
+  </div>
+  <div class="date">
+    <legend class="text"><b>Поступление продуктов на опеределенную дату: </b></legend>
+    <input type="date" id="date" name="products-date" value="2020-01-01" min="2020-01-01" max="2020-12-31">
+  </div>
+  <div class="row">
+
+
+
+
+
+
+    <button id="change" class="change">Изменить по наименованию</button>
+
+    <button id="delete" class="delete">Удалить по наименованию</button>
+    <button id="showOnDate" class="showDate">Показать продукты, поступившие на дату:</button>
+    <button id="show" class="show">Просмотр записей</button>
+    <button id="deleteNonFood" class="deleteName">Удалить все непродовольственные товары</button>
+
+  </div>
+  <table id="tester">
+
+    <tbody id="tbody">
+      <th>Признак</th>
+      <th>Наименование продукта</th>
+      <th>Количество</th>
+      <th>Время поступления</th>
+    </tbody>
+  </table>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.1/socket.io.js"></script>
+  <script>
+    var socket = io.connect('http://localhost:5000');
+    socket.on('message', function (message) {
+    })
+    socket.on('show', function (message) {
+      var tbody = document.getElementById('tester').getElementsByTagName('TBODY')[0];
+      var list = document.getElementById('products');
+      $("#tbody").empty();
+      list.innerHTML = '';
+      rowCount = tbody.rows.length;
+      console.log(rowCount);
+      var rowTH = document.createElement("TR");
+      tbody.appendChild(rowTH);
+      var th1 = document.createElement("TH");
+      var th2 = document.createElement("TH");
+      var th3 = document.createElement("TH");
+      var th4 = document.createElement("TH");
+      rowTH.appendChild(th1);
+      rowTH.appendChild(th2);
+      rowTH.appendChild(th3);
+      rowTH.appendChild(th4);
+      th1.innerHTML = "Признак";
+      th2.innerHTML = "Наименование продукта";
+      th3.innerHTML = "Количество";
+      th4.innerHTML = "Время поступления";
+      for (var i = 0; i < message.length; i++) {
+        var row = document.createElement("TR");
+        tbody.appendChild(row);
+        var td1 = document.createElement("TD");
+        var td2 = document.createElement("TD");
+        var td3 = document.createElement("TD");
+        var td4 = document.createElement("TD");
+        row.appendChild(td1);
+        row.appendChild(td2);
+        row.appendChild(td3);
+        row.appendChild(td4);
+        td1.innerHTML = message[i].feature;
+        td2.innerHTML = message[i].name;
+        td3.innerHTML = message[i].number;
+        td4.innerHTML = message[i].date;
+        var x = document.createElement("option");
+        list.appendChild(x);
+        x.text = message[i].name;
+      }
+    })
+
+    $('#show').click(function () {
+      console.log("clicked");
+      socket.emit("message", "sdf");
+
+    })
+
+
+    $('#add').click(function () {
+
+      var now = new Date();
+      var feat = document.getElementById('select').value;
+      var name = document.getElementById('name').value;
+      var num = document.getElementById('number').value;
+      var date = now.getFullYear() + "-" + now.getMonth() + "-" + now.getDate() + " " + now.getHours() + ":" + now.getMinutes();
+      var inputs = document.querySelectorAll('input[type=text]');
+      var inputsN = document.querySelectorAll('input[type=number]');
+      for (var i = 0; i < inputs.length; i++) {
+        inputs[i].value = '';
+        inputsN[i].value = '';
+      };
+      console.log(feat);
+      console.log(name);
+      console.log(num);
+      console.log(date);
+      let user = { feature: feat, name: name, number: num, date: date };
+      socket.emit("add", user);
+      socket.emit("message", "sdf");
+    })
+
+    $('#delete').click(function () {
+      var feat = document.getElementById('products').value;
+      socket.emit("delete", feat);
+      socket.emit("message", "sdf");
+    })
+
+    $('#change').click(function () {
+      var feat1 = document.getElementById('products').value;
+      var now = new Date();
+      var feat = document.getElementById('select').value;
+      var num = document.getElementById('number').value;
+      var date = now.getFullYear() + "-" + now.getMonth() + "-" + now.getDate() + " " + now.getHours() + ":" + now.getMinutes();
+      console.log(feat);
+      console.log(feat1);
+      console.log(num);
+      console.log(date);
+      let user = { feature: feat, name: feat1, number: num, date: date };
+      socket.emit("change", user);
+      socket.emit("message", "sdf");
+    })
+
+    $('#showOnDate').click(function () {
+      let dateControl = document.querySelector('input[type="date"]');
+      console.log(dateControl.value);
+      socket.emit("showOnDate", dateControl.value);
+      socket.emit("message", "sdf");
+    })
+
+    $('#deleteNonFood').click(function () {
+      socket.emit("deleteNonFood", "Непродовольственная");
+      socket.emit("message", "sdf");
+
+    })
+
+  </script>
+</body>
+
+</html>

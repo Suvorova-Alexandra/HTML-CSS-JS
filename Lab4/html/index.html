@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="D:\My Documents\Visual Code proj\4 лаба\css\lab4.css">
+<script src="D:\My Documents\Visual Code proj\4 лаба\javascript\lab4.js"></script>
+</head>
+<body>
+    <div class="list">
+    <label for="id2" >Только у нас вы можете взять напрокат следующие виды транспорта:</label>
+        
+    <br/>
+        <br/>
+        <select id="id2" name="id2" onchange="imagesView()">
+            <option selected value="Не выбрано">Не выбрано</option>
+            <option value="Автомобиль">Автомобиль</option>
+            <option value="Самокат">Самокат</option>
+            <option value="Самолет">Самолет</option>
+            <option value="Вертолет">Вертолет</option>
+            <option value="Автобус">Автобус</option>
+            <option value="Трамвай">Трамвай</option>    
+        </select>
+        <br/>
+        <br/>
+        <label for="text">Ввести наименование транспорта: </label>
+        <input type="text" size="40" id="text">
+        <input type="submit" onclick="setListValue(); imagesView();" value="Добавить в список">
+        <input type="button" onclick=" saveValue(); openNewWin('images.html');" value="Посмотреть все картинки">
+    </div>
+    <div id="picture" class="pictures"> <img src="D:/My Documents/Visual Code proj/4 лаба/resorce/bg.png"/></div>
+</body>
+</html>

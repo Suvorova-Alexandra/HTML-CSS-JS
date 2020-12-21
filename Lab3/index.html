@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="index.css">
+   
+</head>
+<body>
+    <div class="flexclass" >
+<header >
+   <h1> MyLovelyAutomobileCollection</h1>
+</header>
+<nav  >
+  <a href="index.html">Главная страница</a>
+  <a href="result.html">Результаты</a>
+</nav>
+<article >
+    <img src="avatar.jpg">
+    <form >
+    <div >
+      <legend class="text"> <b>Введите свое имя:</b></legend>
+      <input type="text" size="40" id="text" pattern="^[а-яА-ЯеЁa-zA-Z-\s]+$" required >
+  
+    </div>
+    
+    <div >
+      <legend class="text"><b>В какой местности будет эксплуатироваться автомобиль:</b></legend>
+      <input  type="radio"  name="r" id="r1" value="Крупный город" checked><label for="r1" class="radio">Крупный город</label>
+      <input  type="radio" name="r" id="r2" value="Районнный центр"><label for="r2" class="radio">Районнный центр</label>
+      <input  type="radio" name="r" id="r3" value="Село"><label for="r3" class="radio"> Село</label>
+    </div>
+    <div>
+      <legend class="text"><b>Оцените важность просторного багажника:</b></legend>
+      <input type="range" id="vol" name="volume" min="0" max="10" step="0.1">
+    </div>
+    
+    <div >
+      <input type="checkbox" id="check1" name="scales" value="Есть дети">
+<label for="check1" class="radio">Есть дети</label>
+<input type="checkbox" id="check2" name="scales" value="Есть животные">
+<label for="check2" class="radio">Есть животные</label>
+
+    </div>
+    <div>
+    <legend class="text"><b>Марка машины, которую вы хотели бы приобрести:</b></legend>
+    <select name="select" id="select"> 
+        <option value="BMW" >BMW</option> 
+        <option value="Volkswagen">Volkswagen</option>
+        <option value="Audi">Audi</option>
+      </select>
+    </div>
+    <div >
+        <legend class="text"><b>Опыт вождения:</b></legend>
+        <input class="num" type="number" id="num" name="number"
+        min="1" max="100" pattern="\d+" required>
+        </div>
+        <div>
+            <legend class="text"> <b>Введите свой email адрес(в формате @gmail.com) для получения рассылок и акций.</b></legend>
+        <input class="email" type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size="30" required>
+        <span class="error" aria-live="polite"></span>
+      </div>
+        <div >
+        <input type="submit" onclick="FuncSave();"  value="Отправить">
+        <input type="reset"  value="Сброс">
+        <input type="button" onclick="document.location='result.html'"  value="Посмотреть результаты">
+        <p id="forma"></p>
+</div>
+</form>
+<script type="text/JavaScript">
+
+  function FuncSave()
+ {  
+   var txt=document.getElementById("text");
+   if(!txt.checkValidity()){
+     document.getElementById("forma").innerHtml=txt.validationMessage;
+     return 0;
+   }
+   else  document.getElementById("forma").innerHtml="";
+   var vol=document.getElementById('vol');
+   var num=document.getElementById("num");
+   if(!num.checkValidity()){
+     document.getElementById("forma").innerHtml=txt.validationMessage;
+     return 0;
+   }
+   else  document.getElementById("forma").innerHtml="";
+   var email=document.getElementById("email");
+   if(!email.checkValidity()){
+     document.getElementById("forma").innerHtml=txt.validationMessage;
+     return 0;
+   }
+   else  document.getElementById("forma").innerHtml="";
+
+   var r0 = document.getElementsByName('r');
+   var ch0=document.getElementsByName('scales');
+   var choice1;
+   var check1;
+   var check2;
+   var optval=document.getElementById('select');
+  for (var i = 0; i < r0.length; i++) {
+      if (r0[i].checked) {
+          choice1=r0[i].value;
+      }
+  }
+  if (ch0[0].checked) {
+          check1=ch0[0].value;
+      }
+      else {
+
+        check1="Нет детей.";
+      }
+      if (ch0[1].checked) {
+          check2=ch0[1].value;
+      }
+      else {
+
+        check2="Нет животных.";
+      }
+
+
+  var obj={
+    prop1: txt.value,
+    prop2: vol.value,
+    prop3: choice1,
+    prop4: check1,
+    prop5: check2,
+    prop6: optval.value,
+    prop7: num.value,
+    prop8: email.value
+    };
+
+    var counter=localStorage.length;
+   localStorage.setItem(counter, JSON.stringify(obj));
+
+ }
+</script>
+</article>
+<aside> </aside>
+<footer>
+  Контактные данные : д. Цна, ул. Юбилейная, д.4, МКАД, Минск, 223043, </br>тел. +375334562718</br> Почта: email@mail.ru
+</footer>
+</div>
+
+</body>
+</html>

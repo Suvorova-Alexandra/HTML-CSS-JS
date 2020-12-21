@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<title>Mycar Selection Table</title>
+<style>
+  TABLE {
+    width: 2800px; /* Ширина таблицы */
+    height: 900px;
+    border-collapse: collapse; /* Убираем двойные линии между ячейками */
+    background: #fffaead7;
+    margin: auto;
+   }
+   TD, TH {
+    padding: 3px; /* Поля вокруг содержимого таблицы */
+    border: 3px solid black; /* Параметры рамки */
+    vertical-align:top;
+   }
+  TH{
+  background: #f5e023; /* Цвет фона */
+  }
+  CAPTION{
+  font-size: xx-large;
+  }
+  ol.letters {
+counter-reset: list;
+margin:0;
+}
+ol.letters > li {
+list-style: none;
+position: relative;
+}
+ol.letters > li:before {
+counter-increment: list;
+content: counter(list, lower-alpha) ")";
+position: absolute;
+left: -0.9em;
+}
+ol.numbers {
+counter-reset: list;
+margin:0;
+}
+ol.numbers > li {
+list-style: none;
+position: relative;
+}
+ol.numbers > li:before {
+counter-increment: list;
+content: counter(list, decimal) ")";
+position: absolute;
+left: -0.9em;
+}
+ol.class>li::before{
+  content: "~";
+}
+  </style>
+  </head>
+  <body>
+  <table border="1">
+  <caption> Mycar Selection </caption>  
+  <tr>
+  <td rowspan="3" style="border: 5px solid black; border-bottom-width: 1px; width: 650px; "><div style="float: left; width: 49%;">
+ <b> Марки автомобилей, производящихся в странах:</b>
+ <ol >
+   
+  <li style="font-style: italic;font-weight: bold;">
+  <b><i>Германия</i></b>
+  <ol style="font-style: normal;font-weight: normal; ">
+    <li >
+    <ins style="color: blue ;"> Audi</ins>
+      </li>
+      <li >
+      <ins style="color: blue;">  BMW </ins>
+      </li>
+      <li >
+       <ins style="color: blue;">   Mercedes-Benz </ins>
+        </li>
+  </ol>
+  </li>
+  <li style="font-style: italic; font-weight: bold;" >
+    <b><i>Беларусь</i></b>
+  <ul style="font-style: normal; font-weight: normal;list-style-type: disc;">
+    <li>
+   Geely LC-Cross
+    </li>
+    <li >
+      Citroen C-Elysee
+    </li>
+    <li >
+      Peugeot 301
+    </li>
+    </ul>
+  </li>
+  </ol>
+</div>
+
+<div style="float: right; width: 49%; ">
+  <img src="car2.jpg" 
+  width="300" height="275" alt="Geely" >
+  </div> <div class="clear">
+  </td>
+  <th style="font-size: larger; color:red;">История первого автомобиля </th>
+  <td rowspan="4" style="border: 5px solid black; vertical-align: middle;" > 
+  <img src="car_photo_228612.jpg"   width="260" height="255" alt="BMW,Volks,Audi"></td>
+  <th style="font-size: larger;">Покупать или нет?...  </th>
+  <td rowspan="3" style="vertical-align: middle;"> <img src="car3.jpg" 
+    width="350" height="275" alt="The most expencive"></td>
+    <th style="font-size: larger; color:darkgreen;">Немного о важном</th>
+    </tr>
+    <tr>
+    <td style="width: 400px;">
+      <p style="text-align: right;; font-weight: 400;"><b>Первый автомобиль, ставший серийной моделью, был запатентован в январе 1886 года. Патент под номером 37435 был выдан на трехколесный самодвижущийся экипаж. С этого трицикла началась история мирового автомобилестроения. Свое изобретение Бенц оснастил бензиновым двигателем внутреннего сгорания.
+    </b></p></td>   
+        <td rowspan="2">
+     <i><b>Причины купить собственный автомобиль:</b></i>
+    <ul style ="list-style-type: none;">
+    <li>
+   - Комфорт
+    </li>
+    <li>
+   - Мобильность
+    </li>
+    <li>
+   - Безопасность
+    </li>
+    <li>
+   - Экономия
+    </li>
+    <li>
+   - Статус
+    </li>
+    </ul>
+   <p style="font-family: Impact,fantasy;color:#8B4513;"> Вы еще не обзавелись личным автомобилем, но мечтаете его купить? Хорошенько подумайте: а стоит ли? Существует масса причин сделать этог. Здесь приведено лишь несколько из них, а дальше решайте сами.
+</p>
+    </td>
+    <td> <p style="text-align: justify; font-size: normal; color: rgb(0,180,0); font-stretch: condensed;">О звании абсолютного лидера продаж ведутся большие споры. Volkswagen продолжает считать Beetle/Kafer самым продаваемым автомобилем с результатом примерно в 22 миллиона экземпляров, поскольку за все время производства конструкция автомобиля не претерпела практически никаких изменений, в то время как автомобили, которые претерпели многочисленные рестайлинги и изменения конструкции, давно побили этот рекорд, например Volkswagen Golf. Если учитывать все поколения, то лидером станет Toyota Corolla с более чем 40 миллионами проданных машин, а результат Beetle поднимется на 1,7 миллиона автомобилей с учетом New Beetle и Beetle A5.
+      </p>
+    </td>
+    </tr>
+    <tr>
+    <td><p style="text-align: justify; font-size: normal; color:#800080; font-stretch: expanded;">Концерн и после смерти его основателя продолжал идти в авангарде автомобилестроения. В 1936 году началось производство легковых автомобилей с дизельным мотором. Первой моделью с дизельным двигателем стал Mercedes-Benz 260 D. Дизельный двигатель назван в честь его разработчика - немецкого изобретателя Рудольфа Дизеля (Rudolf Diesel). Этот двигатель обладает довольно высоким коэффициентом полезного действия, а топливо стоит дешевле бензина. И так как экономичность была одним из основных преимуществ дизельных двигателей перед бензиновыми, первыми об их использовании задумались производители грузовых автомобилей. В 1924 году на берлинской автовыставке немецкий концерн MAN представил модель, работающую на дизеле.
+   </p></td>
+    <td> <b>Топ-3 самых продаваемых марок автомобилей</b>
+    <ol>
+<li style="font-style: italic; font-weight: bold;">
+Мир:
+<ol style="font-style: normal; font-weight: normal;">
+<li>
+  <ins style="color: blue ;"> Volkswagen AG</ins>
+  </li>
+  <li>
+    <ins style="color: blue ;"> Toyota Motor</ins>
+  </li>
+  <li>
+    <ins style="color: blue ;"> Renault-Nissan-Mitsubishi Alliance</ins>
+  </li>
+</ol>
+
+  </li>
+  <li style="font-style: italic; font-weight: bold;">
+Беларусь:
+<ul style="font-style: normal; font-weight: normal;list-style-type: disc;">
+  <li>
+    Lada Vesta
+  </li>
+  <li>
+    Volkswagen-Polo
+  </li>
+  <li>
+    Renault Logan
+  </li>
+</ul>
+  </li>
+     </ol>
+
+
+    </td>
+    </tr>
+    <tr>
+      <td colspan="2"> <center><ins> Коллекции автомобилей</ins></center>
+      <ol style ="list-style-type: upper-roman;"><div style="float: left; width: 49%;">
+        <li style="font-weight: bold;"> <ins>Volskwagen</ins>
+          <ol style ="list-style-type: upper-latin;">
+           <li style="font-style: italic;">
+            Класс Городской
+             <ol class="numbers" style="font-style: normal;font-weight: normal;">
+<li>
+Polo
+  </li>
+  <li>
+  Polo Sedan
+  </li>
+  <li>
+  Scirocco
+  </li>
+           </ol>
+           </li>
+           <li style="font-style: italic;font-weight: bold;">
+           Класс Внедорожник
+           <ol style ="list-style-type: lower-latin; font-style: normal;font-weight: normal;" class="letters" >
+            <li >
+           Tarek
+            </li>
+            <li >
+           T-Cross
+            </li>
+            <li>
+           Touareg
+            </li>
+          </ol>
+          </li>
+          <li style="font-style: italic;font-weight: bold;">
+          Класс Средний
+             <ol style="font-style: normal;font-weight: normal;">
+              <li>
+            Passat CC
+              </li>
+              <li>
+              Lavida
+              </li>
+              <li>
+              Arteon
+              </li>
+            </ol>
+          </li>
+          <li style="font-style: italic;font-weight: bold;">
+          Класс Минивен
+             <ol style ="font-style: normal;font-weight: normal;list-style-type: none;" class="class">
+              <li >
+            Caddy
+              </li>
+              <li>
+            Cross Golf
+              </li>
+              <li>
+            Golf Plus
+              </li>
+            </ol>
+          </li>
+          </ol>
+        </li> 
+        </div>
+        <div style="float: right; width: 49%;">
+        <li style="font-weight: bold;"> <ins>BMW</ins>
+        <ol style ="list-style-type: upper-latin;">
+          <li style="font-style: italic;"> Серия X
+            <ol style="font-style: normal;font-weight: normal;">
+<li>
+X1-X4
+  </li>
+  <li>
+  X5,X6
+  </li>
+  <li>
+  X7
+  </li>
+            </ol>
+          </li>
+          <li style="font-style: italic;font-weight: bold;">Серия Z
+            <ol style="font-style: normal;font-weight: normal;">
+              <li>
+  Z4
+              </li>
+            </ol>
+          </li>
+          <li style="font-style: italic;font-weight: bold;">Серия M
+            <ol style="list-style-type: none; font-style: normal;font-weight: normal;">
+              <li>
+  M2, M4, M5,M7
+              </li>
+              <li>
+  M8
+              </li>
+              <li>
+  X M
+              </li>
+            </ol>
+          </li>
+        </ol>
+        </li>
+      </div>
+      <div class="clear"></div>
+      </ol>
+      </td>
+      <td colspan="3" style="font-style: italic;color: #8B008B; text-align: left; vertical-align:bottom;"> <ins>Факт о самой дорогой машине в мире:<br/>
+        Уникальный Bugatti La Voiture Noire (фр. «черный автомобиль») стал одной из сенсаций Женевского автосалона-2019.Французский гиперкар, выпущенный в единственном экземпляре для Фердинанда Пиха, внука основателя Porsche, оценили в 16,5 млн евро (18,7 млн долларов). Технически «черный автомобиль» идентичен Bugatti Chiron: под капотом 8,0-литровый W16 с четырьмя турбинами, развивающий 1500 л.с. и 1600 Нм.
+ </ins> </td>
+    </tr>
+ </table>
+</body>
+</html>

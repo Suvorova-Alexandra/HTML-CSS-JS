@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script  type="text/JavaScript">
+   
+     function FuncTR(){
+         var txt;
+         var vol;
+         var choice1;
+         var check1;
+         var check2;
+         var optval;
+         var num;
+         var email;
+     var obj=[{prop1: txt,prop2: vol,prop3: choice1,prop4: check1, prop5: check2, prop6: optval, prop7: num, prop8: email}];
+
+   
+
+    // Находим нужную таблицу
+    var tbody = document.getElementById('myTable').getElementsByTagName('TBODY')[0];
+    var list=document.getElementById('id2');
+    // Создаем строку таблицы и добавляем ее
+    for(var i=0;i<localStorage.length;i++){
+    var row = document.createElement("TR");
+    tbody.appendChild(row);
+
+
+    var td1 = document.createElement("TD");
+    var td2 = document.createElement("TD");
+    var td3 = document.createElement("TD");
+    var td4 = document.createElement("TD");
+    var td5 = document.createElement("TD");
+    var td6 = document.createElement("TD");
+    var td7 = document.createElement("TD");
+    var td8 = document.createElement("TD");
+    row.appendChild(td1);
+    row.appendChild(td2);
+    row.appendChild(td3);
+    row.appendChild(td4);
+    row.appendChild(td5);
+    row.appendChild(td6);
+    row.appendChild(td7);
+    row.appendChild(td8);
+    if(localStorage.getItem(i)){
+    obj[i]=JSON.parse(localStorage.getItem(i));
+    td1.innerHTML=obj[i].prop1;
+    td2.innerHTML=obj[i].prop2;
+    td3.innerHTML=obj[i].prop3;
+    td4.innerHTML=obj[i].prop4;
+    td5.innerHTML=obj[i].prop5;
+    td6.innerHTML=obj[i].prop6;
+    td7.innerHTML=obj[i].prop7;
+    td8.innerHTML=obj[i].prop8;
+    var x=document.createElement("option");
+     list.appendChild(x);
+    x.text=obj[i].prop1;
+    }
+    }
+
+    }
+    </script>
+</head>
+<div class="flexclass" >
+    <header >
+        <h1>Результаты опроса</h1>
+    </header>
+    <nav >
+        <a href="index.html">Главная страница</a>
+        <a href="result.html">Результаты</a>
+    </nav>
+    <article >
+<body >
+    <table id="myTable">
+        <tbody>
+        
+<tr>
+    <th>Имя</th>
+    <th>Оценка</th>
+    <th>Место эксплуатации</th>
+    <th>Наличие детей</th>
+    <th>Наличие животных</th>
+    <th>Марка машины</th>
+    <th>Опыт вождения</th>
+    <th>E-mail</th>
+</tr>
+</tbody>
+    </table>
+    <div>
+    <input type="button" onclick="document.location='index.html'"  value="Вернуться к предыдущей странице">
+    <button onclick="self.close()">Close</button>
+    </div>
+<div>
+    <label for="id2">Имена зарегистрировавшихся пользователей:</label>
+    <input list="id2" id="id1">
+    <datalist id="id2">
+    </datalist>
+</div>
+</article>
+<aside></aside>
+<footer>
+    Контактные данные : д. Цна, ул. Юбилейная, д.4, МКАД, Минск, 223043, </br>тел. +375334562718</br> Почта: email@mail.ru
+</footer>
+</div>
+<script>
+FuncTR();</script>
+
+    </body>
+    </html>

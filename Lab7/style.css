@@ -1,0 +1,195 @@
+html,body{
+    width: 100%;
+    margin: 0 0 0 0;
+   background-image: url("https://image.freepik.com/free-photo/black-textured-brick-wall-background_53876-63583.jpg");
+   height: 100%;
+}
+
+.flexclass{
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.info{
+    text-indent: 1.5em; /* Отступ первой строки */
+    text-align: justify;
+    color: black;
+    margin-left: 5%;
+    margin-top: 1%;
+    width: 90%;
+    border: 1px solid rgba(0,0, 0, 0.5);
+    padding:10px;
+}
+.Minsk{
+    flex-basis: 60%;
+    text-indent: 1.5em; /* Отступ первой строки */
+    text-align: justify;
+    color: black;
+    font-size: x-large;
+    border: 7px solid rgba(255, 187, 0, 0.5);
+    margin-left: 5%;
+    padding: 15px;
+}
+.infoMinsk{
+    flex-basis: 20%;
+    color: black;
+    font-weight: bolder;
+    margin-left: 5%;
+    width: 80%;
+    padding: 15px;
+    border: 7px dashed black;
+    
+}
+
+.Moscow{
+    flex-basis: 60%;
+    text-indent: 1.5em; /* Отступ первой строки */
+    text-align: justify;
+    color: black;
+    border: 7px solid rgba(255, 187, 0, 0.5);
+    margin-left: 5%;
+    width: 80%;
+    font-size: x-large;
+    padding: 15px;}
+.infoMoscow{
+        flex-basis: 20%;
+        color: black;
+        font-weight: bolder;
+        margin-left: 5%;
+        width: 80%;
+        padding: 15px;
+        border: 7px dashed black;
+}
+
+.London{
+    flex-basis: 60%;
+    text-indent: 1.5em; /* Отступ первой строки */
+    text-align: justify;
+    color: black;
+    border: 7px solid rgba(255, 187, 0, 0.5);
+    margin-left: 5%;
+    font-size: x-large;
+    width: 80%;
+    padding: 15px;
+}
+.infoLondon{
+    flex-basis: 20%;
+    color: black;
+    font-weight: bolder;
+    margin-left: 5%;
+    width: 80%;
+    padding: 15px;
+    border: 7px dashed black;
+}
+
+.Paris{
+    flex-basis: 60%;
+    text-indent: 1.5em; /* Отступ первой строки */
+    text-align: justify;
+    color: black;
+    border: 7px solid rgba(255, 187, 0, 0.5);
+    margin-left: 5%;
+    font-size: x-large;
+    width: 80%;
+    padding: 15px;
+}
+.infoParis{
+    flex-basis: 20%;
+    color: black;
+    font-weight: bolder;
+    margin-left: 5%;
+    width: 80%;
+    padding: 15px;
+    border: 7px dashed black;
+}
+
+.button{
+    background-color: rgba(255, 187, 0, 0.9);
+    opacity: 0.7;
+    color: black;
+    font-size: xx-large;
+    font-weight: bolder;
+    border: 4px solid black; 
+}
+
+.button-raw{
+    margin-top: 3.5%;
+text-align: center;
+vertical-align: middle;
+margin-left: 20%;
+}
+.white{
+    color: black;
+    font-weight: bolder;
+    font-family: fantasy;
+    margin-left: 110%;
+    width: 300px;
+ 
+}
+
+.image1{
+  
+    text-align: center;
+    padding: 10px;
+}
+img{
+    height: 300px;
+    width: 400px;
+}
+.MoscowImage{
+    text-align: center;
+}
+.color{
+    color: black;
+    font-size: larger;
+    font-family: fantasy;
+}
+.back{
+    background-color: rgba(255, 255, 255, 0.7);
+   width: 80%;
+   height: 3600px;
+    position: absolute;
+}
+.flexclass1{
+    
+    display: flex;
+    flex-wrap: wrap;
+}
+header{
+    flex-basis: 100%;
+    height: 200px;
+}
+
+nav{
+    flex-basis: 8.5%;
+    height:3600px;
+    background-color:   rgba(255, 187, 0, 0.9);
+}
+article{
+    flex-basis: 80%;
+    height: 3600px;
+    padding: 20px;
+}
+aside{
+    flex-basis: 8.5%;
+    height:3600px;
+    background-color: rgba(255, 187, 0, 0.9);
+}
+footer{
+    flex-basis: 100%;
+    height:170px;
+    background-color: rgba(255, 255, 255, 0.7);
+    font-weight: bolder;
+    text-align: center;
+}
+.imgLogo{
+    height: 170px;
+    width: 270px;
+    position: absolute;
+    opacity: 0.8;
+    padding: 18px;
+  
+}
+.img1{
+    margin-left: 100%;
+}

@@ -1,0 +1,43 @@
+textarea{
+    border: 1px solid black;
+    width: 250px;
+    height: 150px;
+}
+img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.form{
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    width: 45%;
+    margin-top: 15%;
+    margin-left: 30%;
+}
+html,body{
+    height: 100%;
+    margin: 0 0 0 0;
+}
+html
+{
+    background-image: url("jon-tyson-566CgCRSNCk-unsplash.jpg");
+    background-repeat:no-repeat ;
+    background-size: cover;
+}
+.tester1{
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    font-size: x-large;
+    width: 45%;
+    margin-top: 15%;
+    margin-left: 30%;  
+}
+button{
+    font-size: large;
+    background-color:  rgba(255, 255, 255, 0.5);
+}

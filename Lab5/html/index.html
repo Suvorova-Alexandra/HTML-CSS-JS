@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="D:\My Documents\Visual Code proj\5 лаба 2 версия\css\style.css">
+<script src="D:\My Documents\Visual Code proj\5 лаба 2 версия\js\app.js" defer></script>
+<script src="D:\My Documents\Visual Code proj\5 лаба 2 версия\js\database.js"></script>
+<script src="D:\My Documents\Visual Code proj\5 лаба 2 версия\js\main.js"></script>
+</head>
+<body>
+    <img src="D:\My Documents\Visual Code proj\5 лаба\resources\christopher.jpg">
+    <div class="app">
+        <div class="form">
+<div>
+    <legend class="text"> <b>Введите название заводского цеха:</b></legend>
+    <input type="text" id="name" size="40" pattern="^[а-яА-ЯеЁa-zA-Z-\s]+$" >
+</div>
+<div>
+    <legend class="text"> <b>Введите тип создаваемого продукта:</b></legend>
+    <input type="text" id="type" size="40" pattern="^[а-яА-ЯеЁa-zA-Z-\s]+$" >
+</div>
+<div>
+    <legend class="text"><b>Введите количество сотрудников в цехе:</b></legend>
+    <input  type="text" id="num"  pattern="\d+">
+</div>
+<div>
+    <legend class="text"> <b>Введите email адрес начальника цеха (в формате @--.--).</b></legend>
+    <input type="text" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size="30">
+</div>
+<div>
+    <legend class="text"><b>Название заводского цеха:</b></legend>  
+</div>
+<div>
+    <select name="select" id="select" class="select">
+    <option value="Не выбрано">Не выбрано</option>   
+    </select>
+</div>
+
+<div>
+<input type="button" value="Добавить запись" id="add" class="button">
+<input type="button" value="Очистить форму" id="clear" class="button">
+<input type="button" value="Удалить запись по ID" id="del" class="button">
+<input type="button" value="Показать все записи в виде таблицы" id="show" class="button">
+</div>
+<div>
+    <legend class="text"><b>Введите адрес компании:</b></legend>
+    <input  type="text" id="address" >
+    <input type="button" value="Добавить/Изменить адрес по ID" id="addAddress" class="button">
+</div>
+
+    </div>
+    <div class="table-block1"><div  class="table"></div></div>
+</div>
+</body>
+</html>

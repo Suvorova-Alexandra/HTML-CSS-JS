@@ -1,0 +1,85 @@
+table, td, tr,th{
+    border: 1px solid white;
+    color:white;
+    margin-left: 30%;
+
+   
+}
+table{
+    width: 69%;
+    margin-top: 1%;
+}
+html{
+    background-image: url("b2.jpg");
+    background-attachment: fixed;
+    background-position: center;
+
+     background-size: 100% 100%; 
+}
+.class1{
+    text-align: center;
+    color:white;
+    font-size: larger;
+    width: 23%;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+button{
+    background-color: rgba(0, 0, 0, 0.4);
+    color:rgba(255, 255, 255, 1);
+    width: 250px;
+    height: 40px;
+}
+
+h2{
+    font-size: xx-large;
+    margin-left: 60%;
+    margin-top: -320px;
+    color:white;
+    font-family: fantasy;
+}
+.select{
+    color:white;
+    font-size: larger;
+    margin-top: 1%;
+    margin-left: 40%;
+}
+.date{
+    color:white;
+    font-size: larger;
+    margin-top: -3%;
+
+    margin-left: 68%;
+}
+input[type=text], input[type=number]{
+height: 20px;
+margin-top: 5px;
+}
+
+.add{
+    margin-left: 3%;
+    margin-top: 7%;
+}
+.show{
+    margin-left: 35%;
+        
+        margin-top: 1%;
+}
+.change{
+    margin-top: 1.5%;
+    margin-left: 29%;
+}
+.delete{
+    margin-left: 1%;
+}
+.showDate{
+    margin-left: 5%;
+    margin-top: 23px;
+    position: absolute;
+}
+.deleteName{
+    margin-left: 16.7%;
+    position: absolute;
+    margin-top: 14px;
+}

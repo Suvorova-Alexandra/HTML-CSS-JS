@@ -1,0 +1,167 @@
+body,html{
+    height: 100%;
+    margin: 0 0 0 0;
+background-image: url("nebo.jpg");
+background-repeat: no-repeat;
+}
+h1{
+    text-align: center;
+    text-shadow: gold 2px 2px 4px;
+    margin-top: 0;
+    color:white;
+    font-size: 50px;
+    opacity: 0.5;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.img1{
+    width:100px;
+    height: 100px;
+    position: relative;
+    float:left; /* Выравнивание по левому краю */
+    margin: 7px 7px 7px 0; /* Отступы вокруг картинки */
+}
+.back{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+ 
+}
+.flexclass{
+    margin-top: -2%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.class1{
+
+    flex-basis: 30%;
+color:white;
+position: relative;
+text-align: justify;    
+font-size: large;
+height: 200px;
+padding: 10px;
+}
+.class2{
+    flex-basis: 30%;
+    color:white;
+    position: relative;
+    height: 200px;
+    font-size: large;
+    text-align: justify;
+    padding: 10px;
+   
+  
+}
+.class3{
+    
+    flex-basis: 30%;
+    color:white;
+    position: relative;
+    height: 200px;
+    text-align: justify;
+    font-size: large;
+    padding: 10px;
+    
+}
+.class4{
+    flex-basis: 30%; 
+    color:white;
+    position: relative;
+    height: 200px;
+    font-size: large;
+    text-align: justify;
+    
+    padding: 10px;
+}
+.class5{
+    flex-basis: 30%;
+    color:white;
+    position: relative;
+    height: 250px;
+    text-align: justify;
+    font-size: large;
+    padding: 10px;
+}
+.class6{
+    flex-basis: 30%;
+    color:white;
+    position: relative;
+    height: 200px;
+    font-size: large;
+    text-align: justify;
+    padding: 10px;
+}
+
+
+.class1:hover{
+    border: 1px solid gold;
+}
+.class2:hover{
+    border: 1px solid gold;
+}
+.class3:hover{
+    border: 1px solid gold;
+}
+.class4:hover{
+    border: 1px solid gold;
+}
+.class5:hover{
+    border: 1px solid gold;
+}
+.class6:hover{
+    border: 1px solid gold;
+}
+.button1{
+    margin-left: 50%;
+
+   
+}
+.button1 button{
+    background-color: black;
+    opacity: 0.8;
+   font-size: larger;
+   color: white;
+}
+.button2{
+   margin-left: 30%;
+  
+}
+.button2 button{
+    background-color: black;
+    opacity: 0.8;
+   font-size: larger;
+   color: white;
+
+}
+.but1{
+   
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 2%;
+    position: relative;
+    
+    display: flex;
+    flex-direction: row;
+}
+.red{
+    color: red;
+}
+.classNew{
+    font-style: italic;
+    color: gold;
+    font-size: larger;
+}
+.disabled{
+    background-color:white;
+    opacity: 0.8;
+   font-size: larger;
+   color: black;
+}
+.images{
+    width: 170px;
+  
+    display: none;
+}
+.position{
+    margin-top: 9%;
+}
