@@ -1,4 +1,4 @@
-## System analysis and design of information systems
+## System analysis and design of information systems with web application development module
 9 labs in html+css+js
 ## Description
 1 lab:
